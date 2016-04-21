@@ -1,5 +1,8 @@
 Revision history for Perl extension Thread::Semaphore.
 
+2.05 Mon Feb 18 12:23:15 2008
+	- Install under 'perl' dir
+
 2.04 Fri Feb 15 15:14:30 2008
 	- Fix tests to work under Perl 5.8.0
 

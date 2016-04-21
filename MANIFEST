@@ -1,0 +1,11 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/Thread/Semaphore.pm
+t/00_load.t
+t/01_basic.t
+t/02_errs.t
+t/99_pod.t
+examples/semaphore.pl
+META.yml                                 Module meta-data (added by MakeMaker)

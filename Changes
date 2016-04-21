@@ -1,0 +1,12 @@
+Revision history for Perl extension Thread::Semaphore.
+
+2.02 Thu Feb 14 15:27:00 2008
+	- Argument validation
+	- Test suite
+
+2.01 Sep 02 06:40:00 2003
+	- Minor doc update
+
+2.00 Jul 12 16:32:00 2002
+	- Released as part of Perl 5.8.0
+

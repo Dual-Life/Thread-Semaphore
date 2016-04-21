@@ -19,11 +19,11 @@ if ($] == 5.008) {
     require Test::More;
 }
 Test::More->import();
-plan('tests' => 10);
+plan('tests' => 8);
 
 ### Basic usage with multiple threads ###
 
-my $sm = Thread::Semaphore->new();
+my $sm = Thread::Semaphore->new(0);
 my $st = Thread::Semaphore->new(0);
 ok($sm, 'New Semaphore');
 ok($st, 'New Semaphore');
@@ -31,41 +31,26 @@ ok($st, 'New Semaphore');
 my $token :shared = 0;
 
 threads->create(sub {
+    $st->down_force(2);
+    is($token++, 0, 'Thread got semaphore');
+    $sm->up();
+
     $st->down();
-    is($token++, 1, 'Thread 1 got semaphore');
-    $st->up();
-    $sm->up();
-
-    $st->down(4);
-    is($token, 5, 'Thread 1 done');
-    $sm->up();
-})->detach();
-
-threads->create(sub {
-    $st->down(2);
-    is($token++, 3, 'Thread 2 got semaphore');
-    $st->up();
-    $sm->up();
-
-    $st->down(4);
-    is($token, 5, 'Thread 2 done');
+    is($token++, 3, 'Thread done');
     $sm->up();
 })->detach();
 
 $sm->down();
-is($token++, 0, 'Main has semaphore');
+is($token++, 1, 'Main has semaphore');
+$st->up(2);
+threads::yield();
+
+is($token++, 2, 'Main still has semaphore');
 $st->up();
 
 $sm->down();
-is($token++, 2, 'Main got semaphore');
-$st->up(2);
+is($token, 4, 'Main re-got semaphore');
 
-$sm->down();
-is($token++, 4, 'Main re-got semaphore');
-$st->up(9);
-
-$sm->down(2);
-$st->down();
 ok(1, 'Main done');
 threads::yield();
 

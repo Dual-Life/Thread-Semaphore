@@ -1,5 +1,8 @@
 Revision history for Perl extension Thread::Semaphore.
 
+2.08 Mon May 19 17:03:33 2008
+	- Check for undef args
+
 2.07 Fri Feb 22 21:36:54 2008
 	- Allow installation on non-threaded Perls
 

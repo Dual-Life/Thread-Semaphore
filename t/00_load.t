@@ -8,4 +8,6 @@ if ($Thread::Semaphore::VERSION) {
     diag('Testing Thread::Semaphore ' . $Thread::Semaphore::VERSION);
 }
 
+exit(0);
+
 # EOF

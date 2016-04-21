@@ -17,7 +17,13 @@ use threads;
 use threads::shared;
 use Thread::Semaphore;
 
-use Test::More 'tests' => 10;
+if ($] == 5.008) {
+    require 't/test.pl';   # Test::More work-alike for Perl 5.8.0
+} else {
+    require Test::More;
+}
+Test::More->import();
+plan('tests' => 10);
 
 ### Basic usage with multiple threads ###
 
@@ -65,5 +71,6 @@ $st->up(9);
 $sm->down(2);
 $st->down();
 ok(1, 'Main done');
+threads::yield();
 
 # EOF

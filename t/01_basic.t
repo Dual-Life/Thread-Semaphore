@@ -34,7 +34,7 @@ threads->create(sub {
     $st->up();
     $sm->up();
 
-    $st->down(3);
+    $st->down(4);
     is($token, 5, 'Thread 1 done');
     $sm->up();
 })->detach();
@@ -45,7 +45,7 @@ threads->create(sub {
     $st->up();
     $sm->up();
 
-    $st->down(3);
+    $st->down(4);
     is($token, 5, 'Thread 2 done');
     $sm->up();
 })->detach();
@@ -60,7 +60,7 @@ $st->up(2);
 
 $sm->down();
 is($token++, 4, 'Main re-got semaphore');
-$st->up(7);
+$st->up(9);
 
 $sm->down(2);
 $st->down();

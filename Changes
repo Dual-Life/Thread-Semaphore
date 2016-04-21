@@ -1,5 +1,8 @@
 Revision history for Perl extension Thread::Semaphore.
 
+2.12 Fri Dec 24 17:48:48 2010
+	- POD update
+
 2.11 Thu Jun 11 02:14:41 2010
 	- Added ->down_nb() and ->down_force()
 	- Skip argument validation when no argument

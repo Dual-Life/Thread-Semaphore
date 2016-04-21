@@ -12,7 +12,6 @@ WriteMakefile(
     'VERSION_FROM'  => 'lib/Thread/Semaphore.pm',
     'ABSTRACT_FROM' => 'lib/Thread/Semaphore.pm',
     'PREREQ_PM'     => {
-        'threads'         => 0,
         'threads::shared' => 0,
         'Scalar::Util'    => 1.10,
         'Test::More'      => 0.50,

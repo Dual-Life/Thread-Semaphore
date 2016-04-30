@@ -12,4 +12,3 @@ t/05_force.t
 t/99_pod.t
 t/test.pl
 examples/semaphore.pl
-META.yml                                 Module meta-data (added by MakeMaker)

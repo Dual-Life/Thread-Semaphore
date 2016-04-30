@@ -218,6 +218,9 @@ environment.
 
 =head1 SEE ALSO
 
+Code repository:
+L<https://github.com/Dual-Life/Thread-Semaphore>
+
 Thread::Semaphore Discussion Forum on CPAN:
 L<http://www.cpanforum.com/dist/Thread-Semaphore>
 

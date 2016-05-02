@@ -218,13 +218,15 @@ environment.
 
 =head1 SEE ALSO
 
+Thread::Semaphore on MetaCPAN:
+L<https://metacpan.org/release/Thread-Semaphore>
+
 Code repository:
 L<https://github.com/Dual-Life/Thread-Semaphore>
 
-Thread::Semaphore Discussion Forum on CPAN:
-L<http://www.cpanforum.com/dist/Thread-Semaphore>
-
 L<threads>, L<threads::shared>
+
+Sample code in the I<examples> directory of this distribution on CPAN.
 
 =head1 MAINTAINER
 

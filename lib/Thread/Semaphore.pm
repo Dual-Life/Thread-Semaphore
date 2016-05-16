@@ -221,7 +221,7 @@ environment.
 Thread::Semaphore on MetaCPAN:
 L<https://metacpan.org/release/Thread-Semaphore>
 
-Code repository:
+Code repository for CPAN distribution:
 L<https://github.com/Dual-Life/Thread-Semaphore>
 
 L<threads>, L<threads::shared>

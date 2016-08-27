@@ -1,5 +1,11 @@
 Revision history for Perl extension Thread::Semaphore.
 
+-
+	-
+
+2.13 Sat Aug 27 13:00:00 2016
+	- Added ->down_timed()
+
 2.12 Fri Dec 24 17:48:48 2010
 	- POD update
 

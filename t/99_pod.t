@@ -52,5 +52,6 @@ Hedden
 cpan
 pak
 vrij
+MetaCPAN
 
 __END__
